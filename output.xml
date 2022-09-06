@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220906 16:44:52.365" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Robotframework" source="C:\Users\galin\PycharmProjects\test_robotframework">
+<suite id="s1-s1" name="Robot Test Logout" source="C:\Users\galin\PycharmProjects\test_robotframework\robot test_logout.robot">
+<test id="s1-s1-t1" name="Log out of the system" line="14">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220906 16:44:52.822" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<status status="PASS" starttime="20220906 16:44:52.822" endtime="20220906 16:44:55.463"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220906 16:44:55.475" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20220906 16:44:55.463" endtime="20220906 16:44:55.476"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:52.821" endtime="20220906 16:44:55.476"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user07@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220906 16:44:55.478" level="INFO">Typing text 'user07@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20220906 16:44:55.478" endtime="20220906 16:44:55.981"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:55.476" endtime="20220906 16:44:55.981"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220906 16:44:55.983" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20220906 16:44:55.982" endtime="20220906 16:44:56.275"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:55.981" endtime="20220906 16:44:56.276"/>
+</kw>
+<kw name="Click on the submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[(text()='Sign in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220906 16:44:56.279" level="INFO">Clicking element 'xpath=//*[(text()='Sign in')]'.</msg>
+<status status="PASS" starttime="20220906 16:44:56.278" endtime="20220906 16:44:56.417"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:56.276" endtime="20220906 16:44:56.418"/>
+</kw>
+<kw name="Click on the sign out button">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGNOUTBUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220906 16:44:56.419" endtime="20220906 16:44:57.728"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Sign out']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220906 16:44:57.729" level="INFO">Clicking element 'xpath=//span[text()='Sign out']'.</msg>
+<status status="PASS" starttime="20220906 16:44:57.728" endtime="20220906 16:44:57.827"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:56.418" endtime="20220906 16:44:57.828"/>
+</kw>
+<kw name="Assert title of the page">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220906 16:44:57.844" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20220906 16:44:57.829" endtime="20220906 16:44:57.844"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>switchlanguage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220906 16:44:58.016" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="switchlanguage.png"&gt;&lt;img src="switchlanguage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220906 16:44:57.845" endtime="20220906 16:44:58.016"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:57.828" endtime="20220906 16:44:58.016"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220906 16:44:58.017" endtime="20220906 16:45:00.185"/>
+</kw>
+<status status="PASS" starttime="20220906 16:44:52.820" endtime="20220906 16:45:00.185"/>
+</test>
+<doc>Suite description #automated tests for scout website</doc>
+<status status="PASS" starttime="20220906 16:44:52.400" endtime="20220906 16:45:00.187"/>
+</suite>
+<status status="PASS" starttime="20220906 16:44:52.368" endtime="20220906 16:45:00.191"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Robotframework">Test Robotframework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot Test Logout">Test Robotframework.Robot Test Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
